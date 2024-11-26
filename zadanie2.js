@@ -18,3 +18,26 @@ function divide(a,b){
         return a / b
     }
 }
+
+switch (podana)
+{
+    case "+":
+        console.log("Wynik dodania: "+add(pierwszaLiczba, drugaLiczba));
+        break;
+
+    case "-":
+        console.log("Wynik odejmowania: "+substruct(pierwszaLiczba, drugaLiczba));
+        break;
+
+    case "*":
+        console.log("Wynik mnożenia: "+multipy(pierwszaLiczba, drugaLiczba));
+        break;
+
+    case "%":
+        console.log("Wynik dzielenia: "+divide(pierwszaLiczba, drugaLiczba));
+        break;
+
+    default:
+        console.log("nasz kalkulator nie obsługuje takie działania!!");
+        break;
+    }

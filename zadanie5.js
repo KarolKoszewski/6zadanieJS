@@ -15,9 +15,13 @@ class Cart{
         console.log(`Lista produktów w koszyku ${this.produkt}`);
     }
 }
-
+console.log("Przed usunięciem")
 const Koszyczek = new Cart();
 Koszyczek.addProduct("Jaja");
 Koszyczek.addProduct("Majonez");
 Koszyczek.addProduct("Ser");
+Koszyczek.showCart();
+console.log("Po usunięciem")
+Koszyczek.removeProduct("Jaja");
+Koszyczek.removeProduct("Majonez")
 Koszyczek.showCart();

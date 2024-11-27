@@ -18,7 +18,17 @@ function divide(a,b){
         return a / b
     }
 }
+class kalkulator{
+    constructor(a,b){
+        this.a = a;
+        this.b = b;
+    }
 
+    add(a,b){
+        
+        console.log(`Wynik dodawania to: ${}`)
+    }
+}
 switch (podana)
 {
     case "+":

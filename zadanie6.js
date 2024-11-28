@@ -17,3 +17,16 @@ function srednia(){
 najmniejsza();
 najwieksza();
 srednia();
+
+class sprawdziany{
+    constructor(oceny){
+        oceny = [];
+    }
+    najwieksza(){
+        console.log(`największa ocena to: ${Math.max(...this.oceny)}`);
+    }
+    najmniejsza(){
+        console.log(`najmniejsza ocena to: ${Math.min(...oceny)}`);
+    }
+
+}

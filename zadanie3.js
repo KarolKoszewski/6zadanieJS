@@ -6,8 +6,9 @@ class student{
 
     }
     addGrade(dodaj){
-        
-        this.ocenyPoDodaniu = [...this.oceny, ...dodaj]
+        this.dodaj = [dodaj]
+        console.log(`nowe oceny: ${this.dodaj}`)
+        this.ocenyPoDodaniu = [...this.oceny, ...this.dodaj]
         console.log(`Oceny po dodaniu: ${this.ocenyPoDodaniu}`);
     }
     wypiszDane(imie,wiek){
@@ -15,7 +16,20 @@ class student{
         console.log(`Wiek: ${wiek}`);
         console.log(`Oceny: ${this.oceny}`);
     }
+    getAverage(){
+        let a = this.oceny.reduce((acc, num) => acc + num, 0);
+        let b = this.oceny.length
+        let srednia = a / b
+        console.log(`Średnia ocen przed dodaniem ocen: ${srednia}`);
+
+        let d = this.ocenyPoDodaniu.reduce((acc, num) => acc + num, 0);
+        let e = this.ocenyPoDodaniu.length
+        let srednia2 = d / e
+        console.log(`Średnia ocen przed dodaniem ocen: ${srednia2}`);
+    }
 }
+
  const uczen = new student();
  uczen.wypiszDane("Karol", 17)
- uczen.addGrade(5)
+ uczen.addGrade([5,5,6])
+ uczen.getAverage()

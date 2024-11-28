@@ -1,32 +1,19 @@
-const oceny = [1,2,3,4];
-const arrayLength = oceny.length;
-
-function najwieksza(){
-    const max = Math.max(...oceny);
-    console.log(`największa ocena to: `+max)
-}
-function najmniejsza(){
-    const min = Math.min(...oceny);
-    console.log(`najmniejsza ocena to: `+min)
-}
-function srednia(){
-    const sum = oceny.reduce((acc,num) => acc + num, 0);
-    const srednia = sum / arrayLength
-    console.log(`Średnia ocen wynosi: `+ srednia)
-}
-najmniejsza();
-najwieksza();
-srednia();
-
 class sprawdziany{
     constructor(oceny){
-        oceny = [];
+        this.oceny = oceny;
     }
     najwieksza(){
         console.log(`największa ocena to: ${Math.max(...this.oceny)}`);
     }
     najmniejsza(){
-        console.log(`najmniejsza ocena to: ${Math.min(...oceny)}`);
+        console.log(`najmniejsza ocena to: ${Math.min(...this.oceny)}`);
+    }
+    srednia(){
+        console.log(`Średnia ocen wynosi: ${this.oceny.reduce((acc,num) => acc + num, 0) / this.oceny.length}`);
     }
 
 }
+const klasowka = new sprawdziany([1,2,2,2,3,6,6,6,6])
+klasowka.najmniejsza()
+klasowka.najwieksza()
+klasowka.srednia()

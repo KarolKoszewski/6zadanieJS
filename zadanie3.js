@@ -6,9 +6,8 @@ class student{
 
     }
     addGrade(dodaj){
-        this.dodaj = [dodaj]
-        console.log(`nowe oceny: ${this.dodaj}`)
-        this.ocenyPoDodaniu = [...this.oceny, ...this.dodaj]
+        this.ocenyPoDodaniu = [...this.ocenyPoDodaniu, ...dodaj];
+        console.log(`Nowe oceny: ${dodaj}`);
         console.log(`Oceny po dodaniu: ${this.ocenyPoDodaniu}`);
     }
     wypiszDane(imie,wiek){
@@ -18,7 +17,7 @@ class student{
     }
     getAverage(){
         let a = this.oceny.reduce((acc, num) => acc + num, 0);
-        let b = this.oceny.length
+        let b = this.oceny.length   
         let srednia = a / b
         console.log(`Średnia ocen przed dodaniem ocen: ${srednia}`);
 

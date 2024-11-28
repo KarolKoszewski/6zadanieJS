@@ -1,8 +1,7 @@
 
 class kalkulator{
-    constructor(a,b){
-        this.a = a;
-        this.b = b;
+    constructor(){
+        
     }
     
     add(a,b){
